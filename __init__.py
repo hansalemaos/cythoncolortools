@@ -2,7 +2,7 @@ import os
 import numpy as np
 
 try:
-    from pictcycomp import searchforcolor, are_any_colors_in_pic
+    from .pictcycomp import searchforcolor, are_any_colors_in_pic
 except Exception:
     from cycompi import compile_cython_code
     import os
@@ -114,7 +114,7 @@ except Exception:
         shell=True,
         env=os.environ.copy(),
     )
-    from pictcycomp import searchforcolor, are_any_colors_in_pic
+    from .pictcycomp import searchforcolor, are_any_colors_in_pic
 
 
 def search_colors(pic, colors, add_results=True, cpus=-1):
